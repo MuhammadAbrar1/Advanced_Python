@@ -123,3 +123,116 @@ student_id:str|int="Ab900"      # str|int means strins and integers are allowed.
 
 # student_id can be a string or an integer
 
+# 11 variable
+
+# Normal
+name = "Abrar"
+age = 29
+height = 174.5
+is_active = True
+
+# Hinted
+name:str = "Abrar"
+age:int = 29
+height:float = 174.5
+is_active:bool = True
+
+
+# 12 list
+
+# Normal
+numbers = [10, 20, 30, 40]
+cities = ["Munich", "Berlin", "Hamburg"]
+
+# Hinted
+numbers:list[int] = [10, 20, 30, 40]
+cities:list[str] = ["Munich", "Berlin", "Hamburg"]
+
+
+
+# 13 Tuple
+
+# Normal
+student = ("Abrar", 29)
+
+# Hinted
+student:tuple[str,int] = ("Abrar", 29)
+
+
+
+#  14 Dictionary
+
+# Normal
+marks = {   "Python": 85,
+            "DSA":    70,
+            "Math":   60  }
+
+# Hinted
+marks:tuple[str,int] = {   "Python": 85,
+            "DSA":    70,
+            "Math":   60  }
+
+
+
+# 15 union
+
+# Normal
+student_id = "ID123"
+
+# Hinted
+student_id: str|int = "ID123"
+
+
+
+# 16 functionwith return type
+
+# Normal
+def square(number):
+    return number * number
+
+# Hinted
+def square(number:int) -> int:
+    return number * number
+
+
+
+# 17 function with Float Type
+
+# Normal
+def average(a:int, b:int) -> float:
+    return (a + b) / 2
+
+
+
+# 18 Function returning string
+
+# Normal
+def make_message(name, age):
+    return f"{name} is {age} years old"
+
+# Hinted
+def make_message(name:str, age:int) ->str:
+    return f"{name} is {age} years old"
+
+
+# 19 List as function parameter
+
+# Normal
+def total(numbers):
+    return sum(numbers)
+
+# Hinted
+def total(numbers:list[int]) -> int:
+    return sum(numbers)
+
+
+
+# 20 Dictionary as function Parameter
+
+# Noarmal
+def get_python_marks(marks):
+    return marks["Python"]
+
+# Hinted
+def get_python_marks(marks:dict[str,int]) -> int:
+    return marks["Python"]
