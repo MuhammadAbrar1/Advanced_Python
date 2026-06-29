@@ -11,16 +11,29 @@
 #         print("Invalid Choice")
 
 
+# while True:
+#     weather=input("Enter weather: ")
+#     match weather:
+#         case "cold":
+#             print("wear jacket")
+#         case "sunny":
+#             print("wear sunglasses")
+#         case "rainy":
+#             print("take umbrella")
+#         case "hot":
+#             print("drik more water")
+#         case _:
+#             print("wrong entry")
+
+
 while True:
-    weather=input("Enter weather: ")
-    match weather:
-        case "cold":
-            print("wear jacket")
-        case "sunny":
-            print("wear sunglasses")
-        case "rainy":
-            print("take umbrella")
-        case "hot":
-            print("drik more water")
+    light = input ("enter trafic light: ")
+    match light:
+        case "red":
+            print("stop")
+        case "green":
+            print("go")
+        case "yellow":
+            print("be careful")
         case _:
-            print("wrong entry")
+            print("invalid color")
