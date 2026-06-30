@@ -26,14 +26,27 @@
 #             print("wrong entry")
 
 
+# while True:
+#     light = input ("enter trafic light: ")
+#     match light:
+#         case "red":
+#             print("stop")
+#         case "green":
+#             print("go")
+#         case "yellow":
+#             print("be careful")
+#         case _:
+#             print("invalid color")
+
 while True:
-    light = input ("enter trafic light: ")
-    match light:
-        case "red":
-            print("stop")
-        case "green":
-            print("go")
-        case "yellow":
-            print("be careful")
+    role=input("Enter role: ").upper()
+
+    match role:
+        case "Teacher":
+            print("Teacher Dashbord")
+        case "Student":
+            print("Student Dashbord")
+        case "Admin":
+            print("Admin dashbord")
         case _:
-            print("invalid color")
+            print("Invalid role")
